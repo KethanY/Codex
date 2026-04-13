@@ -2,14 +2,13 @@ import SwiftUI
 import MultipeerConnectivity
 import Network
 import CryptoKit
-import PlaygroundSupport
 
 /*
  AdvancedMultipeerChatPlayground.swift
  ------------------------------------
- Drop this entire file into a new iPad / iOS Swift Playground page.
+ Use this file in a SwiftUI app target (Xcode or Swift Playgrounds App project).
 
- Required playground settings / capabilities:
+ Required app capabilities / permissions:
  1) Platform: iOS / iPadOS Playground
  2) App allows Local Network access
  3) If prompted, allow Nearby Devices + Local Network permissions
@@ -554,5 +553,11 @@ private extension String {
     }
 }
 
-let root = PlaygroundChatRootView()
-PlaygroundPage.current.setLiveView(root)
+@main
+struct AdvancedMultipeerChatApp: App {
+    var body: some Scene {
+        WindowGroup {
+            PlaygroundChatRootView()
+        }
+    }
+}
